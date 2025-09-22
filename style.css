@@ -1,13 +1,22 @@
+/* Color and Font Variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --bg-color-light: #fff;
+    --bg-color-dark: #333;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
 }
 
 header {
-    background-color: #fff;
+    background-color: var(--bg-color-light);
     padding: 1em 2em;
     display: flex;
     justify-content: space-between;
@@ -27,7 +36,7 @@ header {
 }
 
 .main-nav a.active {
-    color: #007bff;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -35,30 +44,73 @@ main {
     padding: 2em;
     max-width: 900px;
     margin: 2em auto;
-    background: #fff;
+    background: var(--bg-color-light);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 .hero {
     text-align: center;
 }
 
-.contact-form label,
-.contact-form input,
-.contact-form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-.contact-form button {
-    background-color: #007bff;
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: var(--bg-color-dark);
     color: white;
-    padding: 0.7em 1.5em;
-    border: none;
-    cursor: pointer;
 }
 
+/* --- About Page Styles --- */
+.about-hero {
+    background: url('https://images.unsplash.com/photo-1542435503-9d047a0b3b4d?ixlib=rb-1.2.1&auto=format&fit=crop') no-repeat center center/cover;
+    color: white;
+    padding: 6em 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+.about-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.about-content h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.3em;
+    margin-top: 2em;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.image-gallery {
+    margin-top: 3em;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Contact Form Styles --- */
 .contact-form {
     padding: 2em;
     background: var(--bg-color-light);
@@ -118,7 +170,6 @@ main {
     transform: translateY(-2px);
 }
 
-/* Style the message that appears after form submission */
 #form-message {
     text-align: center;
     margin-top: 1em;
@@ -140,11 +191,44 @@ main {
     border: 1px solid #f5c6cb;
 }
 
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background: #333;
+/* --- Slideshow Styles --- */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    border-radius: 8px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
     color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* --- Mobile Responsiveness --- */

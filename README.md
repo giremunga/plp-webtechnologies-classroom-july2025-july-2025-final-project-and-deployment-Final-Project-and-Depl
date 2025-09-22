@@ -15,9 +15,9 @@ This project demonstrates my ability to plan, build, and deploy a full-featured 
 
 ## Live URL
 
-[Live Website Link Here](YOUR_DEPLOYED_URL_HERE)
+[Live Website Link Here](https://projectplp.netlify.app/)
 
-(Note: After you deploy your site on GitHub Pages, Netlify, or Vercel, replace the placeholder URL above with the actual live link.)
+
 
 ## Installation and Usage
 
